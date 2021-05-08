@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
@@ -10,6 +10,6 @@ const death = new Schema({
     timestamps: true,
 });
 
-const Death = mongoose.model('Death', userSchema);
+const Death = mongoose.model("Death", death);
 
 module.exports = Death;
