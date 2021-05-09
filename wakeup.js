@@ -15,4 +15,4 @@ const wakeUp = (url, interval) => {
     }, ms);
 };
 
-module.exports = wakeUpDyno;
+module.exports = wakeUp;
