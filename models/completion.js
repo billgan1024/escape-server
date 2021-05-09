@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const success = new Schema({
+const completion = new Schema({
     level: { type: Number, required: true },
     attempts: { type: Number, required: true },
     duration: { type: Number, required: true }
@@ -10,6 +10,6 @@ const success = new Schema({
     timestamps: true,
 });
 
-const Success = mongoose.model("Success", success);
+const Completion = mongoose.model("Completion", completion);
 
-module.exports = Success;
+module.exports = Completion;

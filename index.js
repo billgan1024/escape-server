@@ -22,7 +22,9 @@ connection.once("open", () => {
 });
 
 const deathsRouter = require("./routes/deaths");
+const completionsRouter = require("./routes/completions");
 app.use("/deaths", deathsRouter);
+app.use("/completions", completionsRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
