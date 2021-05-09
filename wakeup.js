@@ -5,7 +5,6 @@ const wakeUp = (url, interval) => {
     const ms = interval * 60000;
     setTimeout(() => {
         try {
-            console.log("wakeup called.");
             fetch(url).then(() => console.log(`Fetching ${url}.`));
         }
         catch (e) {
