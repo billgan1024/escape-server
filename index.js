@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const wakeUp = require("./wakeup");
 
 require("dotenv").config();
 const app = express();
@@ -28,4 +29,5 @@ app.use("/completions", completionsRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
+    wakeUp(process.env.HEROKU_URL, 25);
 });
