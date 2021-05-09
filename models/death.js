@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 
 const death = new Schema({
     level: { type: Number, required: true },
-    x: { type: Number, required: true },
-    y: { type: Number, required: true }
+    xpos: { type: Number, required: true },
+    ypos: { type: Number, required: true }
 }, {
     timestamps: true,
 });
