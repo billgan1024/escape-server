@@ -6,8 +6,6 @@ const completion = new Schema({
     level: { type: Number, required: true },
     attempts: { type: Number, required: true },
     duration: { type: Number, required: true }
-}, {
-    timestamps: true,
 });
 
 const Completion = mongoose.model("Completion", completion);

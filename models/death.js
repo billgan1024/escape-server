@@ -6,8 +6,6 @@ const death = new Schema({
     level: { type: Number, required: true },
     xpos: { type: Number, required: true },
     ypos: { type: Number, required: true }
-}, {
-    timestamps: true,
 });
 
 const Death = mongoose.model("Death", death);
