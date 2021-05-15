@@ -20,4 +20,9 @@ router.route("/add").post((req, res) => {
         .catch(e => { console.log(e); res.status(400).json(e); });
 });
 
+router.route("/clear").delete((req, res) => {
+    Death.deleteMany({})
+    .then(() => res.json("Deaths cleared.")) 
+    .catch(e => { console.log(e); res.status(400).json(e); });
+});
 module.exports = router;
