@@ -19,8 +19,9 @@ router.route("/add").post((req, res) => {
 });
 
 router.route("/clear").delete((req, res) => {
-    Completion.deleteMany({})
-    .then(() => res.json("Completions cleared.")) 
-    .catch(e => { console.log(e); res.status(400).json(e); });
+    //this can accept a filter using the url e.g. ?level=x
+    Completion.deleteMany(req.query)
+        .then(() => res.json(`Completions cleared.`))
+        .catch(e => { console.log(e); res.status(400).json(e); });
 });
 module.exports = router;
