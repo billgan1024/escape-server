@@ -1,12 +1,11 @@
 const router = require("express").Router();
-let Death = require("../models/death");
 
 //note: the standard callback which passes back (err, result) is equal to resolving the promise with then() if it works,
 //or catch() if it doesn't work
 
 //additionally, you can use a try catch block with await
 
-router.route("/").get((req, res) => {
+/* router.route("/").get((req, res) => {
     //retrieve all deaths
     Death.find()
         .then(deaths => res.json(deaths))
@@ -30,5 +29,5 @@ router.route("/clear").delete((req, res) => {
     Death.deleteMany(req.query)
         .then(() => res.json(`Deaths cleared.`))
         .catch(e => { console.log(e); res.status(400).json(e); });
-});
+}); */
 module.exports = router;

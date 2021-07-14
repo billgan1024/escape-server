@@ -1,13 +1,6 @@
-const router = require("express").Router();
-let Completion = require("../models/completion");
 
-router.route("/").get((req, res) => {
-    Completion.find()
-        .then(completion => res.json(completion))
-        .catch(e => { console.log(e); res.status(400).json(e); });
-});
+/* router.route("/add").post((req, res) => {
 
-router.route("/add").post((req, res) => {
     const newCompletion = new Completion(req.body);
 
     newCompletion.save()
@@ -23,5 +16,4 @@ router.route("/clear").delete((req, res) => {
     Completion.deleteMany(req.query)
         .then(() => res.json(`Completions cleared.`))
         .catch(e => { console.log(e); res.status(400).json(e); });
-});
-module.exports = router;
+}); */
